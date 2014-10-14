@@ -1,0 +1,44 @@
+// Lab 10a
+// Programmer: Aaron Melocik
+// Editor used: Windows 7 Notepad
+// Compiler used: Microsoft Visual C++ 2010 Express
+
+Q1. Write a single declaration statement that creates an array variable that can
+store 10 int values, named a.
+
+A1. int a[10];
+
+
+Q2. Write a single declaration statement that creates an array variable that can
+store 10 string values, named s.
+
+A2. string s[10];
+
+
+Q3. Write a single declaration statement that creates an array variable that can
+store the names of the 12 months of the year, in a language of your choosing.
+Name the array as you wish. Use curly-brace initialization to assign the names
+of the months upon declaration. You may separate the statement into multiple
+lines with line breaks after commas, as in the textbook examples.
+
+A3. string month[] = {January, February, March, April, May, June, July, August,
+September, October, November, December}
+
+
+Q4. Write a single declaration statement that creates a dynamic array that can store
+"n" int values, named scores. Assume that "n" is already declared as an int
+variable and is assigned a non-negative value.
+
+A4. int* scores = new int[n];
+
+
+Q5. Write a code block with a for-loop to traverse the dynamic array named scores
+of size "n", that prints to the console each value stored in the array, each
+on a line by itself. Assume that the array and its size are already declared
+and initialized to valid values.
+
+A5. 
+  for (int i=0; i<n; i++)
+    {
+    cout << scores[i] << endl;
+    } // for

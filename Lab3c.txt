@@ -1,0 +1,54 @@
+Q1. What happens if you assign a floating point value to an "int" variable?
+
+A1. The program compiles, but upon running the output only displays the
+integer value, not the decimal values. Importantly: the program does not
+round! It only displays (and, I assume, stores) the numbers before the
+decimal. This could produce calculation errors if a complex decimal was
+stored as an integer, and the demical values were removed.
+
+Q2. What happens if you assign a multiple-character text value to a
+"char" variable?
+
+A2. Enclosing the multiple-character text value with double quotes
+(as in "Male") produces a compiling error. Though the full text is
+cut off in the command prompt box, I believe the error explains that
+it cannot convert the multiple-character text into the single-character
+'char' variable type. (ALSO noteworthy: Enclosing multiple-character
+text within single quotes (as in 'Male") will NOT produce a compiling
+error; however, upon running, only the last character in the character
+string will display (in this instance, "e").)
+
+Q3. What happens if you assign a single-character text value to a
+"string" variable?
+
+A3. Enclosing a single character within single quotes (as in 'A')
+produced some kind of very lengthy and complex compiling error.
+I believe, similarly to Q2, the error is explaining that the compiler
+cannot convert from a 'char' type to string type.
+
+Q4. What happens if you assign a single-character text value to an
+"int" variable?
+
+A4. The program compiles and runs, but the value returned for the
+integer is an unpredictable number. The single character text value
+'0' displayed "48" upon running; the value '-7' displayed "11575;"
+and the value 'a' displayed "97." I assume there is some kind of
+hard-coded translation at work here; suffice to say that I will
+not get the results I want if I use a single-character text value
+in an inteer-type variable.
+
+Q5. What happens if you assign a single-character text value to a
+floating point variable?
+
+A5. Essentially the same problem as Q4 - the single character text
+is replaced by an unpredictable number.
+
+Q6. What happens if you assign an integer value to a "char" variable?
+
+A6. The program compiles and runs, but the "character" returned is
+unpredictable, like a smiley face in the case of 1.
+
+Q7. What happens if you assign an integer value to a "string" variable?
+
+A7. Similar to Q3, the compiler produces an error, stating that it cannot
+convert from the 'int' variable type to a string type.

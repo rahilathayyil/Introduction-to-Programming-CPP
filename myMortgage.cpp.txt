@@ -1,0 +1,41 @@
+// Lab 4c
+// Programmer: Aaron Melocik
+// Editor used: Windows 7 Notepad
+// Compiler used: Microsoft Visual C++ 2010 Express
+
+   Algorithm for Mortgage
+
+      * purpose is to find the MONTHLY payment on a 30-year mortgage
+
+
+In C++, include math libraries
+
+Choose a mortgage amount
+  * $300,000
+Assign mortgage value to integer "p"
+Choose an interest rate
+  * 3.875% (from CEFCU)
+Assign (interest rate/12) to double "r"
+Assign number of monthly payments (30*12) to integer "n"
+  (compile, debug if necessary)
+
+Assign cost of monthly payments (p*r*pow(1+r,n)) / (pow(1+r,n)-1)
+to double "c"
+  (compile, debug if necessary)
+
+Begin output statement - display "p" & "r" & "n"
+  (compile, debug if necessary)
+
+Format "c" to 2 decimals
+  (compile, debug if necessary)
+
+Add formatted value "c" to output statement.
+End, compile, debug if necessary.
+
+---------------
+  NOTES
+
+c = (p * (1 + r)n * r) / ((1 + r)n - 1) = 
+c = (p*r*pow(1+r,n)) / (pow(1+r,n)-1)
+
+S = D*((pow(1+p,T)-1)/p);

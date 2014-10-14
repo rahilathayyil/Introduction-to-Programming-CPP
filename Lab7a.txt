@@ -1,0 +1,89 @@
+// Lab 7a
+// Programmer: Aaron Melocik
+// Editor used: Windows 7 Notepad
+// Compiler used: Microsoft Visual C++ 2010 Express
+
+Q1. Write a code block that uses a for-loop to print to the console your name
+10 times, once per line.
+
+A1.
+for (i = 0; i < 10; i++) 
+  {
+  cout << "Aaron Melocik" << endl;
+  } // for
+
+
+
+Q2. Write a code block that uses a for-loop to print this space-separated sequence:
+0 1 2 3 4 5 6 7
+
+A2. 
+for (i=0; 1<8; i++)
+  {
+  cout << i << " ";
+  } //for
+
+
+
+Q3. Write a code block that uses a for-loop to print this space-separated sequence:
+11 12 13 14 15 16 17 18 19 20
+
+A3. 
+for (i=11; i<21; i++)
+  {
+  cout << i << " ";
+  } //for.
+    // I wrote / executed this program modifying the "bounce2" code; good to know
+    // that "i++" always increases by "1."
+    // I worried that it might increase the count by a number related to the value of int i. :)
+
+
+
+Q4. Write a code block that uses a for-loop to print this space-separated sequence:
+10 9 8 7 6 5 4 3 2 1 0
+
+A4. 
+for (i=10; i>=0; i--)
+  {
+  cout << i << " ";
+  } // for
+    // same as above - wrote and executed to confirm "i--" syntax. It works. :)
+
+
+Q5. Write a code block that uses nested for-loops (and no if-statements or switch-statements)
+to produce this sequence of 4 lines of asterisks (that is, the char value '*'):
+*
+**
+***
+****
+
+A5. 
+for (int i = 0; i < 4; i++) 
+{ 
+  for (int j = 0; j <= i; j++) 
+    {
+    cout << '*'; 
+    }
+  cout << endl; 
+} // for 
+
+
+Q6. Mark up this code block with TWO statements, to count the number of cycles executed in
+the event-controlled loop:
+  while (...)
+  {
+    ...
+  }
+The ... sequences represent unspecified code. Don't print the result -- just count.
+
+A6. 
+while (cycles < x)
+  {
+  cycles = cycles + 1
+  } // while
+
+
+Q7. Write the logical opposite of this if-statement, applying DeMorgan's Theorem: if (a == 1 || a == 2) .
+
+A7. 
+if ( a !=1 && a != 2)

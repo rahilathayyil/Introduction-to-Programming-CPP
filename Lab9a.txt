@@ -1,0 +1,52 @@
+// Lab 9a
+// Programmer: Aaron Melocik
+// Editor used: Windows 7 Notepad
+// Compiler used: Microsoft Visual C++ 2010 Express
+
+Q1. Write a single declaration statement that creates an uninitialized bool
+variable named result.
+
+A1. bool result;
+
+
+Q2. Write a single declaration statement that creates a bool variable named
+found and initializes it to false.
+
+A2. bool found = false;
+
+
+Q3. Write a value-returning function named itsTrue, with no parameters, that
+returns the bool value true.
+
+A3. bool itsTrue()
+  {
+   bool value = true;
+   return value;
+  }
+
+
+Q4. Write a value-returning function named itsMe, with one string parameter,
+that returns the bool value true if the parameter matches your name, and false
+otherwise.
+
+A4. bool itsMe(string name)
+  {
+   bool evaluate = false;
+   if (name == "Aaron") evaluate = true;
+   return evaluate;
+  }
+
+
+Q5. Write a value-returning function named avgHasFractionalPart, with three int
+parameters, that returns true if the average of the three parameter values has
+a fractional component. For example, the average of 4 and 4 and 4 has no fractional
+component, but the average of 4 and 4 and 5 is 4-1/3, and it does have a fractional
+component. HINT: use the modulus operator -- if the sum % 3 is zero, there is no
+fractional component.
+
+A5. bool avgHasFractionalPart(int num1, int num2, int num3)
+  {
+   bool evaluate = false;
+   if ( ((num1 + num2 + num3) % 3) == 0) evaluate = true;
+   return evaluate;
+  }

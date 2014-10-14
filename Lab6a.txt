@@ -1,0 +1,41 @@
+// Lab 6a
+// Programmer: Aaron Melocik
+// Editor used: Windows 7 Notepad
+// Compiler used: Microsoft Visual C++ 2010 Express
+
+
+Q1. Write a code block that uses an if-statement to test the contents of s, and if it is blank
+(that is, of zero length), print "It's blank".
+
+  A1.
+if (s.length() == 0) cout << "It's blank" << endl;
+
+Q2. Write a code block that uses an if-statement to test the contents of s, and if it equals your
+name, print to the console "It's me!" (without the quote marks).
+
+  A2.
+if (s == "Aaron") cout << "It's me!" << endl;
+
+Q3. Write a code block that uses an if-else-statement to test the contents of s, and if it equals
+your name, print to the console "It's me!", otherwise print "It's somebody else.".
+
+  A3.
+if (s == "Aaron") cout << "It's me!" << endl;
+  else cout << "It's somebody else." << endl;
+
+Q4. Write a code block that uses an if-else-if-statement to test the contents of s, and if it
+equals your name, print to the console "It's me!", but if it's your friend's name, print "It's
+my friend.".
+
+  A4. 
+if (s == "Aaron") cout << "It's me!" << endl;
+  else if (s == "Christina") cout << "It's my friend." << endl;
+
+Q5. Write a code block that uses an if-else-if-else-statement to test the contents of s, and if
+it equals your name, print to the console "It's me!", or if it's your friend's name, print "It's
+my friend.", and if it is neither, print "It's somebody else.".
+
+  A5. 
+if (s == "Aaron") cout << "It's me!" << endl;
+  else if (s == "Christina") cout << "It's my friend." << endl;
+  else cout << "It's somebody else." << endl;

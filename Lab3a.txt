@@ -1,0 +1,68 @@
+Q1. One-by-one, change the spelling and case of the words inside "main"
+and recompile. Change the data type specifications (on the left) and
+the variable names (on the right). What changes are possible in the
+data type specifications? What changes are possible in the variable names?
+
+A1. Changing the case of any of the data types ("int", "double", etc.)
+not only produces a compiling error of "undeclared identifier," but
+it also produces syntax errors ("missing ';' before identifier...") and
+further "undeclared identifier" errors from the name meant to be assigned
+to the variable type. Misspelling the data specification types produces
+identical errors. Changes to spelling and capitalization of the variable
+names, however, seem to have no effect. This leads me to believe that names
+are not spelling/case-sensitive; though, for convention's / readability's sakes,
+It is advised to follow the convention of using capital letters for variable
+names, except for beginning 'new words' within the variable name with a capital
+letter (as in "birthWeight").
+
+
+
+Q2. What happens if you leave out the [ #include <string> ] statement?
+What does the compiler error say? Scoring tip for all future labs: labs
+will be returned for redo if you use string variables in the program
+and forget to include the string library. If you use g++, be careful,
+because it lets you get away with forgetting to include the library!
+
+A2. Leaving out the [ #include <string> ] statement produces 3 errors:
+  'string' : undeclared identifier   //compiler cannot recognize "string" type
+  syntax error : missing ';' before identifier 'firstName'   //because the
+// compiler believes "string", above, is not a type, it cannot assign
+// "firstName" to it. It is looking for a ";" preceding it.
+  'firstName' : undeclared identifier   //as 'string' above.
+In essence, it is the same as mis-spelling the 'string' type; the
+compiler won't recognize the 'string' type.
+
+
+
+Q3. What happens if you leave out the [ using namespace std; ] statement?
+What does the compiler error say?
+
+A3. The same 3 errors produced in Q2 are produced again. This leads
+me to believe that BOTH the [ #include <string> ] and
+[ using namespace std; ] statements must be declared at the beginning
+of any programming using the "string" variable type for the program to
+compile and function correctly.
+
+
+
+Q4. What happens if you leave out the [ return 0; ] statement?
+
+A4. The program appears to compile and run without any problems. A bit
+of research, however, shows me that the "return 0" command at the end
+of a program is important for debugging purposes because it will indicate
+successful completion of the "main" function. Though I'm not
+100% confident (I hope to understand this better as I gain familiarity
+with C++), I believe that "return 0" assigns a value to the "main"
+variable, which is an "int" type. That said, I also see that all standards-
+compliant compilers will implicitly add "return 0" to "main()". For conventions'
+and debugging's sakes, I will add "return 0" at the conclusion of the
+"int main()" function.
+
+
+
+Q5. This statement results in a compiler error: [ string name ] .
+What could be wrong with it?
+
+A5. [string name] is not a statement unless followed by a ";". To assign a
+'string'-type variable with the name 'name,' the statement should read:
+[ string name; ].

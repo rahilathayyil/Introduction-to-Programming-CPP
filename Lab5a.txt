@@ -1,0 +1,83 @@
+Q1. When prompted to enter your age, which is to be stored
+as an integer, what happens if you enter (a) a value with
+a decimal, such as 21.5?
+
+A1.  a) Does the program accept the input? Yes
+     a) Does the program terminate with a fatal error? No
+     a) (If not) what does the output show? The decimal is
+truncated, displaying "21".
+
+... or (b) a text value, such as twenty-one?
+
+     b) Does the program accept the input? No
+     b) Does the program terminate with a fatal error? No
+(at least, it does not display "fatal error," though it
+does go bonkers).
+     b) (If not) what does the output show? The program displays
+the rest of the output statements, but all the remaining input
+prompts run together on one line, the user is not given the
+chance to input values, and the output for all 4 values is
+unpredictable gobbledegook.
+
+Q2. When prompted to enter your GPA, which is to be stored as a
+floating point number, what happens if you enter (a) a value
+without a decimal, such as 4?
+
+A2.  a) Does the program accept the input? Yes
+     a) Does the program terminate with a fatal error? No
+     a) (If not) what does the output show? The output displays
+the integer value.
+
+... or (b) a text value, such as four?
+
+             *** Identical to A1.b) ***
+
+     b) Does the program accept the input? No
+     b) Does the program terminate with a fatal error? No
+(at least, it does not display "fatal error," though it
+does go bonkers).
+     b) (If not) what does the output show? The program displays
+the rest of the output statements, but all the remaining input
+prompts run together on one line, the user is not given the
+chance to input values, and the output for all 4 values is
+unpredictable gobbledegook.
+
+Q3. When prompted to enter your name, which is to be stored as
+any-character text, what happens if you enter (a) a decimal value,
+such as 3.14?
+
+A3.  a) Does the program accept the input? Y
+     a) Does the program terminate with a fatal error? N
+     a) (If not) what does the output show? "3.14". I suspect,
+however, that this "3.14" is a string, and you cannot do math
+with it. That's what we learned in Java, at least...
+
+... or (b) a text value, such as George Washington?
+
+     b) Does the program accept the input? Of course! This is what
+it's designed to do!!!
+     b) Does the program terminate with a fatal error? N
+     b) (If not) what does the output show? The expected "string".
+
+Q4. When prompted to enter your gender, which is to be
+stored as single-character text, what happens if you enter
+(a) a whole number, such as 4?
+
+A4.  a) Does the program accept the input? Y
+     a) Does the program terminate with a fatal error? N
+     a) (If not) what does the output show? The input "4".
+
+... or (b) a decimal value, such as 3.14?
+
+     b) Does the program accept the input? Y
+     b) Does the program terminate with a fatal error? N
+     b) (If not) what does the output show? "3". The input
+is truncated to the first character.
+
+... or (c) a text value, such as male?
+
+     c) Does the program accept the input? Y
+     c) Does the program terminate with a fatal error? N
+     c) (If not) what does the output show? "m". The input
+is truncated to the first character.
+

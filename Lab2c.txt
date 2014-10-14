@@ -1,0 +1,66 @@
+    Q1. One-by-one, change the spelling and case of the words in the file, recompile, and run 
+(if the compile step is successful). List which words cannot be changed and which can be changed.
+
+A1. a) I changed "int" to "Int": during compiling I got an error code C2146 "syntax error" 
+on Line 1 (missing ";" before identifier "main"). I also got an error code C4430 "missing 
+type specifier" on Lines 1 & 2 (it assumed "int", but noted that C++ does not support 
+default-int).
+b) I changed "main" to "Main" (and reverted "Int" back to "int"): the program generate the 
+helloTest.obj object file, but did not generate a helloTest.exe executable. I recieved the 
+feedback "LINK: fatal error LNK1561: entry point must be defined."
+c) I changed "return" to "Return" (and reverted "Main" back to "main"): neither the *.obj 
+nor the *.exe file was generated. I recieved 2 error messages, both related to Line 3: 
+error C2065 ('Return' : undeclared identifier) and C2143 (syntax error: missing ';' 
+before 'constant').
+d) To ensure that the problem was the capitalization of the program contents and not 
+something to do with the file name, I reverted "Return" back to "return" and compiled. The 
+compiler ran and generated both expected files: "helloTest.obj" and "helloTest.exe." I 
+executed helloTest.exe and it ran without producing an error (or anything else useful, 
+for that matter!).
+
+    Q2. Insert blank lines in the code in various places, and recompile. What effect do 
+blank lines have on the compiler? 
+
+A2. I inserted lines all over the place - even in between words on the same line, like 
+"int [line break] main()" and "return [line break] 0." In all cases the compiler generated 
+both expected files, and the executable ran with no errors. Blank lines do not appear to 
+have any effect on the compiler. This leads me to believe that blank lines are for user 
+readability/organization, not for the computer's benefit.
+
+    Q3. Try indenting with different numbers of spaces -- even try zero spaces -- and 
+recompile. What effect does indenting have on the compiler? Explain why you think we 
+use indenting.
+
+A3. Similar to my results in question 2., indenting with different numbers of spaces 
+had no effect on the program's ability to compile and the executable's ability to execute. 
+I did notice that this was only true for INDENTING - removing spaces between "return" and 
+"0", for instance, produced an error C2065 'return0' undeclared identifier. This leads me 
+to believe that, as above, blank lines are for user readability/organization, not for the 
+computer's benefit.
+
+    Q4. Change the name of the source file and recompile. Try various spellings, case, and 
+even punctuation and spaces. What do you discover to be true about source file names?
+
+A4. Changes in the file name length, capitalization, numbers, etc. did not appear to make a 
+difference to the compiler as long as I gave the compiler the correct source file name to 
+compile. The exception to this rule was adding spaces to the file name: This produced both 
+a Command line warning D9024 (unrecognized source file), and a fatal error C1083, cannot 
+open source file. It appears that the compiler was looking for 2 programs, "helloTest" and 
+"1." I replaced this space with an underscore; the file "helloTest_1.cpp" compiled and ran 
+just fine. I replaced the underscore with a semicolon, and it compiled and ran fine. Spaces 
+in the file name are clearly not good. I will be aware that there may be other characters 
+that will also produce source file errors.
+
+    Q5. Move the source file to another folder, but stay logged into the original folder. 
+(The easiest thing to do is create a subfolder of your original folder, named test. In the 
+compile command, include the path to the source file, like cl test/helloTest.cpp -EHs. Does 
+the location of the source file make any diference to the compiler? If so, what difference 
+does it make? Does it run?
+
+A5. Very interesting! Yes, the compiler did compile the helloTest.cpp file after I designated 
+the correct directory to find it; BUT it generated the related *.obj and *.exe files in the 
+root directory (and the executable worked), NOT in the "test" directory where the *.cpp file 
+was located! This leads me to believe, in conjunction with the results of Step 3 above, that 
+I could simultaneously call and compile files from several different directories in one command 
+from the command prompt, and that the compiler would produce the desired files in the root 
+directory from where I executed the cl command! Cool!

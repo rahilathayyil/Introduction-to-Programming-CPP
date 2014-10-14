@@ -1,0 +1,58 @@
+// Lab 8a
+// Programmer: Aaron Melocik
+// Editor used: Windows 7 Notepad
+// Compiler used: Microsoft Visual C++ 2010 Express
+
+
+Q1. Write a void function named me, with no parameters, that prints
+your name to the console.
+
+A1. 
+void me() 
+  { 
+    cout << "Aaron" << endl; 
+  } // me 
+
+
+Q2. Write a value-returning function named zero, with no parameters,
+that returns the int value 0.
+
+A2. 
+int 0()
+  {
+    return 0;
+  }
+
+
+Q3. Write a value-returning function named doubleIt, with one int
+parameter, that returns two times the parameter's value.
+
+A3. 
+int doubleIt(int single)
+  {
+    return (single*2);
+  }
+
+
+Q4. Write a value-returning function named bigger, with two int
+parameters, that returns the larger of the two parameters (and
+either one if they are the same).
+
+A4. 
+int bigger(int a, int b)
+  {
+    max = a;
+    if (b>a) max = b;
+    return max;
+  }
+
+
+Q5. Write a void function named average, with three double
+parameters, that prints to the console their average (including
+any fractional part).
+
+A5. 
+void average(double a, double b, double c)
+  {
+    cout << ((a + b + c) / 3.0);
+  }

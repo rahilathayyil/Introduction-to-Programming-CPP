@@ -1,0 +1,23 @@
+Q1. What is the result of the expression 1 + 1 ?
+
+A1. 2
+
+
+Q2. What is the result of the expression 9.0 / 5.0 ?
+
+A2. 1.8
+
+
+Q3. What is the result of the expression 9 / 5 ?
+
+A3. 1 (the value is truncated)
+
+
+Q4. What is the result of the expression 9.0 / 5 ?
+
+A4. 1.8 (the output appears to have the resolution of the finer number / higher decimals)
+
+
+Q5. What is the result of the expression a / b, if both a and b are int variables, and a's value is 9, and b's value is 5 ?
+
+A5. 1 (an integer expression is displayed; the result is truncated, not rounded)

@@ -1,0 +1,55 @@
+// Lab 9c
+// Programmer: Aaron Melocik
+// Editor used: Windows 7 Notepad
+// Compiler used: Microsoft Visual C++ 2010 Express
+
+  int sum = 0;
+  for (int i = 0; i < 1000000000; i++)
+    sum += 1;
+
+
+
+Q1. Change the data type for sum to double, and recompile and run. Observe the
+result for sum and explain what you see.
+
+A1. The result changes to scientific notation. When "sum" is an int, the display
+reads "1000000000". When "sum" is a double, the display reads "1e+009".
+
+
+Q2. Change the data type for sum to float, and recompile and run. Observe the
+result for sum and explain what you see.
+
+A2. The result displayed is "1.67772e+007", Which is equal to "16,777,200". This
+is about 1/60th the value returned via an int or double. If my binary counting is
+correct, this represents the loss of almost 6 binary switches worth of counting
+(2, 4, 8, 16, 32, 64). I've read up on moreinfo on Floating vs Int data types...
+but I'll admit I'm struggling to understand *exactly* why this result is printing.
+I understand that a float value reserves some of the bits for fractional values,
+so it's reasonable to think the maximum calculable value would be lower... I'll
+keep this in mind as I continue studying and re-visit as I unerstand more.
+
+
+Q3. Using any data type for sum, change the #of loop cycles from one billion
+to ten billion (by simply adding a zero), and recompile and run. Observe the
+result and explain what happens.
+
+A3. First of all: it takes a *much* longer time to calculate! In fact, I let the
+program work away at an "int" of 10 billion, and while the program completed
+ONE billion cycles in three seconds, by 5 minutes it had not completed the
+TEN billion cycles. I believe what's happening here is that ten billion is out of
+the range of the computer to store; therefore the "i < ten b" condition is
+effectively never met, and the loop never ends!
+
+
+ENDING PARAGRAPH: What I learned about floating point numbers required some
+research (thank you Stack Overflow). I guess the most instructive thing I
+learned is that a "double" is called "double" because it is double the precision
+of a float. As the book explains in Ch 9.2, because both floats and doubles
+change the way the bits count in each byte compared to an int - specifically by
+changing some of the bits into fractional rather than integer values - the maximum
+precision of values they can store is limited, whether that precision is an
+extremely large number or a small fraction. Floats use 4 bytes, and so are less
+precise than the 8 byte double variable type, but they take up less space in the
+computer's memory and calculate quicker. Double will never be able to count a 
+larger number than an equivalent 8 byte int, because (like float), some of the
+bits are reserved for non-integer values.

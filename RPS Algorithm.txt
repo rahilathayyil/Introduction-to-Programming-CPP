@@ -1,0 +1,36 @@
+* Play until human decides to quit
+	Enter:
+	r = rock
+	s = scissors
+	p = paper
+	q = quit
+
+
+variables:
+
+char humanChoice = 'q'
+char compChoice = 'r'
+
+
+--- initialize random number generator
+
+
+hR = 10
+hP = 20
+hS = 30
+
+cr = 0
+cp = 1
+cs = 2
+
+Rr = 10 >> Human:Rock, Computer:Rock, TIE!
+Rp = 11 >> Human:Rock, Computer:Paper, COMPUTER WINS!
+Rs = 12 >> Human:Rock, Computer:Scissors, HUMAN WINS!
+
+Pr = 20 >> Human:Paper, Computer:Rock, HUMAN WINS!
+Pp = 21 >> Human:Paper, Computer:Paper, TIE!
+Ps = 22 >> Human:Paper, Computer:Scissors, COMPUTER WINS!
+
+Sr = 30 >> Human:Scissors, Computer:Rock, COMPUTER WINS!
+Sp = 31 >> Human:Scissors, Computer:Paper, HUMAN WINS!
+Ss = 21 >> Human:Scissors, Computer:Scissors, TIE!
